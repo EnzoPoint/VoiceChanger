@@ -1,0 +1,34 @@
+@import "../abstracts/_colors.scss";
+@import "../base/_typography.scss";
+@import "../base/_mixins.scss";
+
+.container {
+    justify-content: flex-start;
+    gap: 38px;
+    padding: 54px 16px;
+}
+
+.label {
+    @include text-md-medium;
+    color: $primary;
+}
+
+.title {
+    @include header-2-regular;
+    color: $primary;
+}
+
+.caption {
+    @include text-md-regular;
+    color: $secondary-400;
+}
+
+.button {
+    @include flex-container(row, nowrap, center, center);
+    color: $secondary-400;
+}
+
+.primary {
+    background-color: $primary;
+}
+

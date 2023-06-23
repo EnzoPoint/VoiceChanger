@@ -1,0 +1,49 @@
+@import "../abstracts/_colors.scss";
+@import "../base/_typography.scss";
+@import "../base/_mixins.scss";
+
+.container {
+    justify-content: flex-start;
+    gap: 38px;
+    padding: 54px 16px;
+}
+
+.label {
+    @include text-md-medium;
+    color: $primary;
+}
+
+.title {
+    @include header-2-regular;
+    color: $primary;
+}
+
+.input {
+    @include text-md-medium;
+    color: $primary;
+    border: 0.6px solid $secondary-400;
+    border-radius: 4px;
+    padding: 16px;
+    width: 90%;
+    /// Issue on Phone 
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+        border: 1px solid $primary;
+    }
+}
+
+.caption {
+    @include text-md-regular;
+    color: $secondary-400;
+}
+
+.fail {
+    @include text-md-regular;
+    color: $error;
+}
+
+.success {
+    @include text-md-regular;
+    color: $success;
+}

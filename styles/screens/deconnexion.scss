@@ -1,0 +1,31 @@
+
+@import "../abstracts/_colors.scss";
+@import "../base/_typography.scss";
+@import "../base/_mixins.scss";
+
+.container {
+    @extend .screenContainer;
+    justify-content: flex-start;
+    gap: 32px;
+    padding: 48px 16px;
+}
+
+.label {
+    @include text-md-medium;
+    color: $secondary;
+}
+
+.input {
+    @include text-md-regular;
+    color: $secondary;
+    border: 1px solid $secondary-400;
+    border-radius: 4px;
+    padding: 16px;
+    width: 100%;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+
+    &:focus {
+        border: 1px solid $primary;
+    }
+}

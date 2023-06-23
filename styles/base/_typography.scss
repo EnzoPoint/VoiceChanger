@@ -1,0 +1,207 @@
+@import "./styles/base/_reset.scss";
+
+$main-font: 'Montserrat';
+
+$font-weight-light: "Light";
+$font-weight-regular: "Regular";
+$font-weight-medium: "Medium";
+$font-weight-semibold: "SemiBold";
+$font-weight-bold: "Bold";
+
+// font size
+
+$h1-font-size: 32;
+$h2-font-size: 28;
+$h3-font-size: 24;
+$h4-font-size: 20;
+$text-xl-font-size: 20;
+$text-md-font-size: 16;
+$text-sm-font-size: 14;
+$text-xs-font-size: 12;
+
+@mixin reset-typography($font-family) {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    // width: fit-content;
+}
+
+@mixin typo-maker($font-size, $font-weight) {
+    @include reset-typography($main-font + "-" + $font-weight);
+    font-size: $font-size;
+}
+
+
+// header 1
+
+@mixin header-1-light {
+    @include typo-maker($h1-font-size, $font-weight-light);
+}
+
+@mixin header-1-regular {
+    @include typo-maker($h1-font-size, $font-weight-regular);
+}
+
+@mixin header-1-medium {
+    @include typo-maker($h1-font-size, $font-weight-medium);
+}
+
+@mixin header-1-semibold {
+    @include typo-maker($h1-font-size, $font-weight-semibold);
+}
+
+@mixin header-1-bold {
+    @include typo-maker($h1-font-size, $font-weight-bold);
+}
+
+
+// header 2
+
+@mixin header-2-light {
+    @include typo-maker($h2-font-size, $font-weight-light);
+}
+
+@mixin header-2-regular {
+    @include typo-maker($h2-font-size, $font-weight-regular);
+}
+
+@mixin header-2-medium {
+    @include typo-maker($h2-font-size, $font-weight-medium);
+}
+
+
+@mixin header-2-semibold {
+    @include typo-maker($h2-font-size, $font-weight-semibold);
+}
+
+@mixin header-2-bold {
+    @include typo-maker($h2-font-size, $font-weight-bold);
+}
+
+// header 3
+
+@mixin header-3-light {
+    @include typo-maker($h3-font-size, $font-weight-light);
+}
+
+@mixin header-3-regular {
+    @include typo-maker($h3-font-size, $font-weight-regular);
+}
+
+@mixin header-3-medium {
+    @include typo-maker($h3-font-size, $font-weight-medium);
+}
+
+
+@mixin header-3-semibold {
+    @include typo-maker($h3-font-size, $font-weight-semibold);
+}
+
+@mixin header-3-bold {
+    @include typo-maker($h3-font-size, $font-weight-bold);
+}
+
+// header 4
+
+@mixin header-4-regular {
+    @include typo-maker($h4-font-size, $font-weight-regular);
+}
+
+@mixin header-4-medium {
+    @include typo-maker($h4-font-size, $font-weight-medium);
+}
+
+
+@mixin header-4-semibold {
+    @include typo-maker($h4-font-size, $font-weight-semibold);
+}
+
+@mixin header-4-bold {
+    @include typo-maker($h4-font-size, $font-weight-bold);
+}
+
+// text xl
+
+@mixin text-xl-regular {
+    @include typo-maker($text-xl-font-size, $font-weight-regular);
+}
+
+@mixin text-xl-medium {
+    @include typo-maker($text-xl-font-size, $font-weight-medium);
+}
+
+
+@mixin text-xl-semibold {
+    @include typo-maker($text-xl-font-size, $font-weight-semibold);
+}
+
+@mixin text-xl-bold {
+    @include typo-maker($text-xl-font-size, $font-weight-bold);
+}
+
+// text medium
+
+@mixin text-md-regular {
+    @include typo-maker($text-md-font-size, $font-weight-regular);
+}
+
+@mixin text-md-medium {
+    @include typo-maker($text-md-font-size, $font-weight-medium);
+}
+
+
+@mixin text-md-semibold {
+    @include typo-maker($text-md-font-size, $font-weight-semibold);
+}
+
+@mixin text-md-bold {
+    @include typo-maker($text-md-font-size, $font-weight-bold);
+}
+
+// text small
+
+@mixin text-sm-regular {
+    @include typo-maker($text-sm-font-size, $font-weight-regular);
+}
+
+@mixin text-sm-medium {
+    @include typo-maker($text-sm-font-size, $font-weight-medium);
+}
+
+
+@mixin text-sm-semibold {
+    @include typo-maker($text-sm-font-size, $font-weight-semibold);
+}
+
+@mixin text-sm-bold {
+    @include typo-maker($text-sm-font-size, $font-weight-bold);
+}
+
+// text xs
+
+@mixin text-xs-regular {
+    @include typo-maker($text-xs-font-size, $font-weight-regular);
+}
+
+@mixin text-xs-medium {
+    @include typo-maker($text-xs-font-size, $font-weight-medium);
+}
+
+
+@mixin text-xs-semibold {
+    @include typo-maker($text-xs-font-size, $font-weight-semibold);
+}
+
+@mixin text-xs-bold {
+    @include typo-maker($text-xs-font-size, $font-weight-bold);
+}
+
+@mixin button-text {
+    @include typo-maker($text-sm-font-size, $font-weight-medium);
+}
+
+@mixin text-overflow-ellipsis {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

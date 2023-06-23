@@ -1,0 +1,15 @@
+@import "./styles/abstracts/_colors.scss";
+@import "./styles/base/_typography.scss";
+@import "./styles/base/_mixins.scss";
+
+.containerFixe, .containerFluid {
+
+    @include flex-container(row, nowrap, center, stretch);
+
+    gap: 8px;
+}
+
+.containerFixe {
+    position: absolute;
+    bottom: 64px;
+}

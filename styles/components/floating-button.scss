@@ -1,0 +1,25 @@
+@import "./styles/abstracts/_colors.scss";
+@import "./styles/base/_typography.scss";
+@import "./styles/base/_mixins.scss";
+
+
+.floatingButton {
+
+    @include flex-container(row, nowrap, center, center);
+    gap: 8px;
+    border-radius: 8px;
+    padding: 16px;
+
+    background: $primary;
+
+    margin: auto auto 0;
+
+    @include spread-shadow($primary, 0.4, 30px, 60px);
+
+    z-index: -1;
+}
+
+.text {
+    @include text-md-medium;
+    color: $white;
+}

@@ -1,0 +1,58 @@
+
+@import "../abstracts/_colors.scss";
+@import "../base/_typography.scss";
+@import "../base/_mixins.scss";
+
+.container {
+    justify-content: flex-start;
+    gap: 38px;
+    padding: 54px 16px;
+}
+
+.label {
+    @include text-md-medium;
+    color: $primary;
+}
+
+.title {
+    @include header-2-regular;
+    color: $primary;
+}
+
+.caption {
+    @include text-md-regular;
+    color: $secondary-400;
+}
+
+.button {
+    @include flex-container(row, nowrap, center, center);
+    color: $secondary-400;
+}
+
+.description {
+    @include text-md-regular;
+    color: $black-alt-400
+}
+  
+.itemContainer {
+    padding: 8px 16px;
+    background-color: $primary;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.itemText {
+    @include text-md-medium;
+    color: $white;
+    align-self: center;
+}
+
+.pagination { 
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.noGood {
+    background-color: $secondary-400;
+}

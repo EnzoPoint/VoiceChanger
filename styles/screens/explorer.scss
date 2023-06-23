@@ -1,0 +1,42 @@
+@import "../abstracts/_colors.scss";
+@import "../base/_typography.scss";
+@import "../base/_mixins.scss";
+
+.container {
+    @extend .screenContainer;
+    @include flex-container(column, nowrap, flex-start, flex-start);
+    padding: 0 18px;
+    // background-color: adjust-color($primary, $lightness: +50%);
+    gap: 18px;
+}
+
+.menu {
+    width: 100%;
+    @include flex-container(row, nowrap, space-between, center);
+    gap: 18px;
+}
+
+.buttonContainer {
+    @include flex-container(row, nowrap, space-between, center);
+    gap: 18px;
+}
+
+.button {
+    background-color: $primary;
+    color: $white;
+}
+
+.title {
+    @include header-1-regular;
+    color: $primary;
+}
+
+.subtitle {
+    @include header-2-regular;
+    color: $primary;
+}
+
+.section {
+    @include header-3-regular;
+    color: $primary;
+}

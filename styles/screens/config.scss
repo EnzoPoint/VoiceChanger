@@ -1,0 +1,106 @@
+@import "../abstracts/_colors.scss";
+@import "../base/_typography.scss";
+@import "../base/_mixins.scss";
+
+.container {
+    justify-content: flex-start;
+    gap: 38px;
+    padding: 54px 16px;
+}
+
+.label {
+    @include text-md-medium;
+    color: $primary;
+}
+
+.title {
+    @include header-2-regular;
+    color: $primary;
+}
+
+.caption {
+    @include text-md-regular;
+    color: $secondary-400;
+}
+
+.button {
+    @include flex-container(row, nowrap, center, center);
+    color: $secondary-400;
+}
+
+.slider {
+    flex: none;
+    border-radius: 8px;
+    width: 70%;
+}
+
+.primary {
+    background-color: $primary;
+}
+
+.rangeContainer {
+    @include flex-container(row, nowrap, space-between, center);
+    width: 70%;
+    margin-top: -30px;
+}
+
+.rangeValue {
+    @include text-md-medium;
+    color: $primary;
+}
+
+.radioContainer {
+    @include flex-container(row, nowrap, center, center);
+    margin-left: 24px; //// CEST PAS BEAU BERKKKKK
+    width: 100%;
+}
+
+.radioBlock {
+    @include flex-container(row, nowrap, center, center);
+
+    background: $primary;
+    padding: 10px 10px;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+.radioLabel {
+    @include text-md-medium;
+    color: $white;
+}
+
+.radio {
+    width: 20;
+    height: 20;
+    border: 1px solid $white;
+    margin-right: 8;
+    border-radius: 12px;
+}
+
+.selected {
+    background-color: $white;
+}
+
+.placeholder {
+    @include button-text;
+    color: $primary;
+}
+
+.inputContainer {
+    @include flex-container(row, nowrap, center, center);
+    border: 1px solid $primary;
+    border-radius: 4px;
+    padding: 10px 10px;
+    align-self: center;
+    width: 100%;
+}
+
+.input {
+    @include text-md-regular;
+    color: $primary;
+    text-align: center;
+}
+
+.placeholderStyle {
+    color: $primary;
+}

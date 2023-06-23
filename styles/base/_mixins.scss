@@ -1,0 +1,82 @@
+
+
+@mixin flex-container($direction, $should-wrap, $justify-content: flex-start, $align-items: stretch) {
+    display: flex;
+    flex-flow: $direction $should-wrap;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+@mixin flex-row-nowrap {
+    @include flex-container(row, nowrap);
+}
+
+@mixin flex-row-wrap {
+    @include flex-container(row, wrap);
+}
+
+@mixin flex-col-nowrap {
+    @include flex-container(column, nowrap);
+}
+
+@mixin flex-col-wrap {
+    @include flex-container(row, wrap);
+}
+
+@mixin full-size-col {
+    @include flex-container(column, nowrap, center, center);
+    width: 100%;
+    height: 100%;
+}
+
+
+// shadows
+
+@mixin spread-shadow($color, $alpha, $y: 30px, $blur: 30px) {
+    shadow-color: $color;
+    shadow-opacity: $alpha;
+    shadow-offset: 0px $y;
+    shadow-radius: $blur;
+    elevation: 40;
+}
+
+
+
+@mixin spread-shadow-colored($color, $y: 20px, $blur: 60px) {
+    @include spread-shadow($color, 0.2, $y, $blur);
+}
+
+
+// error state
+
+@mixin error-state {
+    border: 1px solid $error;
+}
+
+
+
+@mixin small-icon {
+    width: 14px;
+    height: 14px;
+}
+
+@mixin medium-icon {
+    width: 20px;
+    height: 20px;
+}
+
+@mixin large-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.screenContainer {
+
+    width: 100%;
+    height: 100%;
+
+    @include flex-container(column, nowrap, center, center);
+    gap: 38px;
+    // background: $white
+
+}

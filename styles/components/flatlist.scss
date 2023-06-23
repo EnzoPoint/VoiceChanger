@@ -1,0 +1,10 @@
+@import "./styles/abstracts/_colors.scss";
+@import "./styles/base/_typography.scss";
+@import "./styles/base/_mixins.scss";
+
+.container {
+    @include flex-container(column, nowrap, center, center);
+    gap: 8px;
+    justify-content: flex-start;
+    overflow-y: auto;
+}
